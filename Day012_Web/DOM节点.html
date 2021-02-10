@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM的页面</title>
+</head>
+<body id="body" onload="">
+    <a type="javascript:void(0)" id="h">这是个链接 <!--这是注释--></a><br>
+    <h1 id="h1">这是个标题</h1>
+    <input type="text" name="heh" id="input">
+</body>
+    <script type="text/javascript">
+        console.log(document.body.nodeName)
+        console.log(document.body.attributes[1].nodeName)
+        //文本节点都是#text
+        var a = document.getElementById("h");
+        console.log(a.nodeName)
+        console.log(a.childNodes[0].nodeName)
+        //文本节点的nodeValue都是自身的内容
+        console.log(a.childNodes[0].nodeValue)
+        var h1 = document.getElementById("h1")
+        console.log(h1.childNodes[0].nodeName)
+        console.log(h1.childNodes[0].nodeValue)
+        //-----------------------------------------
+        var input = document.getElementById("input")
+        console.log(input.attributes[0].nodeValue)
+        console.log(input.attributes[1].nodeValue)
+        console.log(input.attributes[2].nodeValue)
+        //-----------------------------------------
+        console.log(document.body.nodeType) //元素=1
+        console.log(document.body.attributes[0].nodeType) //属性=2
+        console.log(document.getElementById("h").childNodes[0].nodeType) //文本=3
+        console.log(document.getElementById("h").childNodes[1].nodeType) //注释=8
+        console.log(document.nodeType) //文档=9
+        //-----------------------------------------
+        var lists = document.body.childNodes
+        console.log(lists.length)
+        for (let i = 0; i < lists.length; i++) {
+            console.log(lists[i])
+        }
+    </script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<button onclick="newWindow()">打开新的窗口</button>
+	<button onclick="newWindow()">关闭新窗口</button>
+	<body>
+		<script type="text/javascript">
+			var a = 10;
+			var b = 0;
+			document.write(window.a + "<br>")
+			window.document.write(window.b + "<br>")
+			document.write(window.innerWidth + "*" + window.innerHeight + "<br/>")
+			document.write(window.innerWidth.clientWidth)
+			document.write(document.documentElement.clientHeight)
+			
+			var newWindow;
+			function newWindow() {
+				newWindow = window.open("http://www.baidu.com","百度")
+			}
+			
+			function closeWindow() {
+				newWindow.close()
+			}
+		</script>
+	</body>
+</html>

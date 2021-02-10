@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改</title>
+</head>
+<body>
+<div id="div1">
+
+    </div>
+    <p>这是第1个</p>
+    <p class="num">这是第2个</p>
+    <p>这是第3个</p>
+    <p class="num">这是第4个</p>
+    <p>这是第5个</p>
+    <p>这是第6个</p>
+    <button onclick="changes()">修改class为num的内容</button>
+    <script type="text/javascript">
+        function changes() {
+            var nums = document.getElementsByClassName("num")
+            nums[0].innerText = "我也不知道这是第几个"
+        }
+    </script>
+</body>
+</html>

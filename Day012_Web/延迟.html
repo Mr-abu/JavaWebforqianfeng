@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script type="text/javascript">
+        setTimeout(
+            function () {
+                alert('恭喜你，中奖了')
+            }, 5000
+        )
+    </script>
+
+    <script type="text/javascript">
+        var num = 0;
+        var id = 0;
+        function show() {
+            document.write(id + "好好学习<br/>")
+            num++;
+            if (num!=10) {
+                id = setTimeout(show, 1000)
+            }
+        }
+        id = setTimeout(show, 1000)
+    </script>
+</body>
+</html>

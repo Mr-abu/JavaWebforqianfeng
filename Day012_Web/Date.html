@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button onclick="stops()">停止当前时间</button>
+		<button onclick="goon()">继续</button>
+		<script type="text/javascript">
+
+			function times() {
+
+				location.reload();
+			}
+
+			var date = new Date();
+			document.write(date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDay() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() +"<br/>");
+
+			var s = setInterval(times, 1000)
+			// document.write(date.getFullYear() +"<br />")
+			// document.write(date.getMonth() + "<br />")
+			// document.write(date.getDate() + "<br />")
+			// document.write(date.getHours() + ":")
+			// document.write(date.getMinutes() + ":")
+			// document.write(date.getSeconds())
+			function stops() {
+				clearInterval(s);
+			}
+			function goon() {
+				s = setInterval(times, 1000)
+			}
+
+		</script>
+	</body>
+</html>

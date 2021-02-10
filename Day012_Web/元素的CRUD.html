@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="div1">
+        <p id="p1">今天星期二</p>
+        <p id="p2">二月九号</p>
+        <div id="div2">
+            <p id="p3">希望明天是晴天</p>
+            <p id="p4">然后就可以出去玩了</p>
+        </div>
+    </div><br>
+    <button onclick="newEle()">在div1里面追加元素</button>
+    <script type="text/javascript">
+        function newEle() {
+            //新建了个标签
+            var img = document.createElement("img")
+            img.setAttribute("src", "img/漫步.gif")
+            //获得容器
+            var div1 = document.getElementById("div1")
+            //在容器里面追加新标签
+            // div1.appendChild()
+
+            var p2 = document.getElementById("p2")
+            div1.insertBefore(img, p2)
+
+            var p5 = document.createElement("p")
+            var texts = document.createTextNode("这是新建的P标签")
+            p5.appendChild(texts)
+            div1.appendChild(p5)
+        }
+    </script>
+</body>
+</html>

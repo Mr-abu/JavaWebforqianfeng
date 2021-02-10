@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取元素</title>
+</head>
+<body>
+    <div id="div1">
+
+    </div>
+    <p>这是第1个</p>
+    <p class="num">这是第2个</p>
+    <p>这是第3个</p>
+    <p class="num">这是第4个</p>
+    <p>这是第5个</p>
+    <p>这是第6个</p>
+    <script type="text/javascript">
+        //获取单个
+        var div1 = document.getElementById("div1")
+        console.log(div1.id)
+        //获取多个
+        var ps = document.getElementsByTagName("p")
+        console.log(ps[3].innerText)
+        //获取多个（class）
+        var num = document.getElementsByClassName("num")
+        console.log(num[2].innerText)
+    </script>
+</body>
+</html>

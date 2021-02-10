@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <a  id="aa" href="">链接</a>
+    <div id="div1">
+        <div id="div2">
+            <span>嘿嘿嘿</span>
+        </div>
+    </div>
+    <img id="imgs" src="img/漫步.gif" alt="这是一张图片" title="这是一张GIF" width="300px" height="300px">
+    <script type="text/javascript">
+        console.log(document.body.parentNode.parentNode)
+        var a = document.getElementById("aa")
+        console.log(a.childNodes[0].parentNode.nodeName)
+        console.log(a.childNodes.length)
+        console.log(document.getElementById("div1").childNodes[0].nodeName)
+        //----------------------------------------------
+        var imgs = document.getElementById("imgs")
+        var att = imgs.attributes
+        console.log(att.length)
+        for (let i = 0; i < att.length; i++) {
+            console.log(att[i].nodeName + ":" + att[i].nodeValue)
+        }
+    </script>
+</body>
+</html>

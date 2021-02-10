@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>循环遍历body下节点</title>
+</head>
+<body>
+    <p id="demo">单击按钮获取body元素子节点的节点名称</p>
+    <button onclick="myfunction()">点我</button>
+    <script type="text/javascript">
+        function myfunction() {
+            var txt = ""
+            var c = document.body.childNodes
+            for ( let i = 0; i < c.length; i++) {
+                txt = txt + c[i].nodeName + "<br>"
+            }
+            document.write(txt)
+        }
+    </script>
+    <p><strong>注意：</strong> 空格元素是文本，文本是节点</p>
+</body>
+</html>

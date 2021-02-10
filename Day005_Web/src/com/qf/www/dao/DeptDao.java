@@ -1,0 +1,14 @@
+package com.qf.www.dao;
+
+import com.qf.www.entity.Dept;
+
+import java.util.List;
+
+public interface DeptDao {
+
+    List<Dept> getAllDept();
+    int delete(int no);
+    Dept getDept(int no);
+    int update(Dept dept);
+    int insert(Dept dept);
+}

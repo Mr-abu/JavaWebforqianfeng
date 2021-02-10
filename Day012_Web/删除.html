@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <td>AAA</td>
+                <td>zzz</td>
+                <td>xxx</td>
+                <td><button onclick="del(this)">删除</button></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td>AAA</td>
+                <td>zzz</td>
+                <td>xxx</td>
+                <td><button onclick="del(this)">删除</button></td>
+            </tr>
+        </table>
+
+    </div>
+    <script type="text/javascript">
+        function del(obj){
+            //var info = document.getElementById("info")
+            //info.remove()
+
+            var p = obj.parentNode.parentNode
+            p.remove()
+        }
+    </script>
+</body>
+</html>

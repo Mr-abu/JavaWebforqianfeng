@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="div1">
+        <p id="p1">这是一个段落</p>
+        <p id="p2">这是另一个段落</p>
+    </div>
+
+    <button type="button" id="btn" onclick="deletes()">
+        替换p1
+    </button>
+    <script type="text/javascript">
+        function deletes() {
+            var p3 = document.createElement("p")
+            var texts = document.createTextNode("这是要替换的文本")
+            p3.appendChild(texts)
+            var p1 = document.getElementById("p1")
+            //替换的  被替换的
+            div1.replaceChild(p3,p1)
+        }
+    </script>
+</body>
+</html>
