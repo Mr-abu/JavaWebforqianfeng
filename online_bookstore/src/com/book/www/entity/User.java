@@ -1,25 +1,38 @@
 package com.book.www.entity;
 
-public class User {
+public class User { //用户
+
+    private String id;
     private String username;
     private String password;
-    private String name;
+    private String realName;
     private String phone;
     private String address;
     private String email;
-    private int access;
+    private String code;    //激活码
+    private boolean access; //激活状态
 
     @Override
     public String toString() {
         return "User{" +
-                "username='" + username + '\'' +
+                "id='" + id + '\'' +
+                ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
-                ", name='" + name + '\'' +
+                ", realName='" + realName + '\'' +
                 ", phone='" + phone + '\'' +
                 ", address='" + address + '\'' +
                 ", email='" + email + '\'' +
+                ", code='" + code + '\'' +
                 ", access=" + access +
                 '}';
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getUsername() {
@@ -38,12 +51,12 @@ public class User {
         this.password = password;
     }
 
-    public String getName() {
-        return name;
+    public String getRealName() {
+        return realName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setRealName(String realName) {
+        this.realName = realName;
     }
 
     public String getPhone() {
@@ -70,24 +83,34 @@ public class User {
         this.email = email;
     }
 
-    public int getAccess() {
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public boolean isAccess() {
         return access;
     }
 
-    public void setAccess(int access) {
+    public void setAccess(boolean access) {
         this.access = access;
     }
 
     public User() {
     }
 
-    public User(String username, String password, String name, String phone, String address, String email, int access) {
+    public User(String id, String username, String password, String realName, String phone, String address, String email, String code, boolean access) {
+        this.id = id;
         this.username = username;
         this.password = password;
-        this.name = name;
+        this.realName = realName;
         this.phone = phone;
         this.address = address;
         this.email = email;
+        this.code = code;
         this.access = access;
     }
 }
